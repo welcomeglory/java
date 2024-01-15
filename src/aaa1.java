@@ -15,9 +15,9 @@ public static void main(String[] args) {
 }
 
 private static void showString(String string) {
-	 char[] str;
+	 char[] str = null;
 	System.out.println(str);
-	   System.out.println(str.length());
+	   System.out.println(str.length);
 }
 }
 
