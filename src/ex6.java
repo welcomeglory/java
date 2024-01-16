@@ -1,16 +1,38 @@
+package java0116;
 
-public class ex6 {
-
-	public static void main(String[] args) {
-		divide(4,2);
-		divide(6,2);
-		divide(9,0);		
+import java.util.Scanner;
+class Circle6 {
+	static final double PI = 3.1415;
+	private double radius;
+	Circle6(double rad) {
+		radius = rad;
 	}
-	public static void divide(int num1, int num2) {
-		if(num2 == 0) {
-			System.out.println("0으로 나눌 수 없습니다.");
-			return; // 값의 반환 없이 메소드만 종료
+	double getArea() {
+		return (radius * radius) * PI;
+	}
+	void showPerimeter() {
+		double peri = (radius * 2) * PI;
+		System.out.println("둘레: " + peri);
+	}
+	void showArea() {
+		double area = (radius * radius) * PI;
+		System.out.println("넓이: " + area);
+	}
+}
+public class java_ch13_Circle2 {
+	public static void main(String[] args) {
+		final int CIRCLE_MAX = 3;
+		Circle6[] arrCircle = new Circle6[CIRCLE_MAX];
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < arrCircle.length; i++) {
+			System.out.println("반지름을 입력하세요.");
+			double radius = sc.nextDouble();
+			arrCircle[i] = new Circle6(radius);
 		}
-		System.out.println("나눗셈 결과: " + (num1 / num2));	
+		double areaSum = 0;
+		for (int i = 0; i < arrCircle.length; i++) {
+			areaSum = areaSum + arrCircle[i].getArea();
+		}
+		System.out.println("넓이의 합" + areaSum);
 	}
 }

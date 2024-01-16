@@ -1,16 +1,3 @@
-class A{
-	int a = 5;	// 인스턴스(객체) 변수 - 함수 밖 클래스에 있는 변수
-	public int getA() { //a값 리턴 함수
-		return a;
-	}
-	public void setA(int b) {
-		a=b;
-	}
-}
-class B{
-	int b;
-}
-
 class Circle{
 	final double PI=3.14;
 	double radius;
