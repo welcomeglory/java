@@ -28,7 +28,12 @@ public class FruitMain{
 		}else {
 			System.out.println("False 입니다.");
 		}
-		
+		Fruit fruit2 = new Fruit();
+		if(fruit2 instanceof Grape) {
+			System.out.println("true 입니다.");
+		}else {
+			System.out.println("False 입니다.");
+		}
 		if(fruit instanceof Grape) {
 			System.out.println("true 입니다.");
 		}
