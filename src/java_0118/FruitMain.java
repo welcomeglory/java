@@ -34,9 +34,6 @@ public class FruitMain{
 		}else {
 			System.out.println("False 입니다.");
 		}
-		if(fruit instanceof Grape) {
-			System.out.println("true 입니다.");
-		}
 		Fruit fAry[] = { new Grape(), new Apple(), new Pear() };
 		for (Fruit f : fAry)
 			f.print();
