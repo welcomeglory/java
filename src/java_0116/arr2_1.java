@@ -1,4 +1,4 @@
-package java0116;
+package java_0116;
 
 public class arr2_1 {
 	public static void main(String[] args) {

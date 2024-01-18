@@ -1,4 +1,4 @@
-package java0116;
+package java_0116;
 class Circle5 {
 	static final double PI = 3.1415;
 	private double radius;

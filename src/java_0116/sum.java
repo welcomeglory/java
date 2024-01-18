@@ -1,4 +1,4 @@
-package java0116;
+package java_0116;
 public class sum {
 	public static int sumOfAry(int[] ar) {
 		int sum = 0;

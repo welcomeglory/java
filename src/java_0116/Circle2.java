@@ -1,4 +1,4 @@
-package java0116;
+package java_0116;
 import java.util.Scanner;
 class Circle6 {
 	static final double PI = 3.1415;

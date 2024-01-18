@@ -1,4 +1,4 @@
-package java0116;
+package java_0116;
 import java.util.Scanner;
 class Rectangle2 {
 	private double w;

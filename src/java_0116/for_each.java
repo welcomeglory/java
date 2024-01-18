@@ -1,4 +1,4 @@
-package java0116;
+package java_0116;
 class Box {
 	private int boxNum;
 	private String item;

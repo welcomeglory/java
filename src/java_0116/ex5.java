@@ -1,4 +1,4 @@
-package java0116;
+package java_0116;
 public class ex5 {
 	public static void main(String[] args) {
 		int[] num = new int[100];
