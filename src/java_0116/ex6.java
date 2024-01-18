@@ -30,6 +30,7 @@ public class ex6 {
 			double h = sc.nextDouble();
 			rec1[i] = new Rectangle2(w, h);
 		}
+		sc.close();
 		double recSum = sumRectangle(rec1);
 		System.out.println("≥–¿Ã¿« «’" + recSum);
 	}

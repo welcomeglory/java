@@ -31,6 +31,7 @@ public class java_ch13_Circle2 {
 		for (int i = 0; i < arrCircle.length; i++) {
 			areaSum = areaSum + arrCircle[i].getArea();
 		}
+		sc.close();
 		System.out.println("³ÐÀÌÀÇ ÇÕ" + areaSum);
 	}
 }

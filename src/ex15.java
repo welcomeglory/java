@@ -17,7 +17,7 @@ class AA2{
 	}
 	
 
-	public void getNum() {
+	public void getNum(int num) {
 		this.num = num;
 	}
 }

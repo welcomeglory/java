@@ -31,6 +31,7 @@ public class Grade{
 				scanner.close();
 				return;
 			}
+			scanner.close();
 			printScore1(temp);
 		}			
 	}
