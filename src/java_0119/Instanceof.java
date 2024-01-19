@@ -4,6 +4,7 @@ class Box {
 		System.out.println("Simple Wrapping");
 	}
 }
+//
 class PaperBox extends Box {
 	public void paperWrap() {
 		System.out.println("Paper Wrapping");
