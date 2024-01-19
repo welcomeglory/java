@@ -25,7 +25,13 @@ public class Instanceof {
 	}
 	public static void wrapBox(Box box) {
 		if (box instanceof GoldPaperBox) {
+			//goldWrap() 호출을 위해 자식으로 형변환
+			//box를 GoldPaperBox로 형변환
+			GoldPaperBox goldBox = (GoldPaperBox) box;
+			goldBox.goldWrap();
+			// 위아래 동일
 			((GoldPaperBox) box).goldWrap();
+			
 		} else if (box instanceof PaperBox) {
 			((PaperBox) box).paperWrap();
 		} else {
@@ -33,3 +39,5 @@ public class Instanceof {
 		}
 	}
 }
+
+
