@@ -1,14 +1,18 @@
 package java_0117;
+
 public class test21 {
 	public static void main(String[] args) {
-		int[][] arr = new int[4][4];	
-		int num=1;
-		for(int i=0; i<arr.length;i++ ) {
-			for(int j=0; j<arr.length;j++) {
-				arr[i][j]=num++;
-				System.out.print(arr[i][j]+"\t");
+		String str1 = "AbcAbcA";
+		String str2 = "AAA";
+		int answer = 0;
+		for (int i = 0; i < str1.length(); i++) {
+			if ((str1.substring(i, i + 1)).equals(str2.substring(0, 1))) {
+				for (int j = 0; j < str2.length(); j++) {
+					if ((str1.substring(i + j, i + j + 1)).equals(str2.substring(j, j + 1)))
+						answer = 1;
+				}
 			}
-			System.out.println();
 		}
+		System.out.println(answer);
 	}
 }
