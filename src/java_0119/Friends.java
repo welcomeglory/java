@@ -1,50 +1,50 @@
 package java_0119;
-class UnivFriend { // 대학 동창
-	private String name;
-	private String major; // 전공
-	private String phone;
-	public UnivFriend(String na, String ma, String ph) {
+class Friend {
+	protected String name;
+	protected String phone;
+	public Friend(String na, String ph) {
 		name = na;
-		major = ma;
 		phone = ph;
 	}
 	public void showInfo() {
 		System.out.println("이름: " + name);
-		System.out.println("전공: " + major);
 		System.out.println("전화: " + phone);
 	}
 }
-class CompFriend { // 직장 동료
-	private String name;
-	private String department; // 부서
-	private String phone;
+class CompFriend extends Friend {
+	private String department;
 	public CompFriend(String na, String de, String ph) {
-		name = na;
+		super(na, ph);
 		department = de;
-		phone = ph;
 	}
 	public void showInfo() {
-		System.out.println("이름: " + name);
+		super.showInfo();
 		System.out.println("부서: " + department);
-		System.out.println("전화: " + phone);
+	}
+}
+class UnivFriend extends Friend {
+	private String major;
+	public UnivFriend(String na, String ma, String ph) {
+		super(na, ph);
+		major = ma;
+	}
+	public void showInfo() {
+		super.showInfo();
+		System.out.println("전공: " + major);
 	}
 }
 public class Friends {
 	public static void main(String[] args) {
-		UnivFriend[] ufrns = new UnivFriend[5];
-		int ucnt = 0;
-		CompFriend[] cfrns = new CompFriend[5];
-		int ccnt = 0;
-		ufrns[ucnt++] = new UnivFriend("LEE", "Computer", "010-333-555");
-		ufrns[ucnt++] = new UnivFriend("SEO", "Electronics", "010-222-444");
-		cfrns[ccnt++] = new CompFriend("YOON", "R&D 1", "02-123-999");
-		cfrns[ccnt++] = new CompFriend("PARK", "R&D 2", "02-321-777");
-		for (int i = 0; i < ucnt; i++) {
-			ufrns[i].showInfo();
-			System.out.println();
-		}
-		for (int i = 0; i < ccnt; i++) {
-			cfrns[i].showInfo();
+		Friend[] frns = new Friend[10];
+		int cnt = 0;
+		//polymorphism 적용
+		frns[cnt++] = new UnivFriend("LEE", "Computer", "010-333-555");
+		frns[cnt++] = new UnivFriend("SEO", "Electronics", "010-222-444");
+		frns[cnt++] = new CompFriend("YOON", "R&D 1", "02-123-999");
+		frns[cnt++] = new CompFriend("PARK", "R&D 2", "02-321-777");
+		// 모든 동창 및 동료의 정보 전체 출력
+		for (int i = 0; i < cnt; i++) {
+			frns[i].showInfo(); // 오버라이딩 한 메소드가 호출된다.
 			System.out.println();
 		}
 	}
