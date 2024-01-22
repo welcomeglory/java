@@ -1,4 +1,5 @@
 package java_0119;
+
 class Box {
 	public void simpleWrap() {
 		System.out.println("Simple Wrapping");

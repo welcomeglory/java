@@ -1,8 +1,24 @@
 package java_0122;
 
 interface Printable {
-	public abstract void print(String doc);
+	public  void print(String doc);
 }
+interface ColorPrintable extends Printable {
+	   void printCMYK(String doc);
+	}
+class Prn909Drv implements ColorPrintable {
+	   @Override
+	   public void print(String doc) {   // 흑백 출력
+	      System.out.println("black & white ver");
+	      System.out.println(doc);
+	   }
+	   
+	   @Override
+	   public void printCMYK(String doc) {   // 컬러 출력
+	      System.out.println("CMYK ver");
+	      System.out.println(doc);
+	   }
+	}
 class SamsungPrinterDriver implements Printable {
 	public void print(String doc) {
 		System.out.println("From Samsung printer");
