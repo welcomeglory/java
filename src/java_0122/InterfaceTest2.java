@@ -9,9 +9,9 @@ interface Shape {
 		draw();
 	}
 }
- class Circle5 implements Shape{
+ class Circle1 implements Shape{
 	int r;
-	public Circle5(int r) {
+	public Circle1(int r) {
 		this.r = r;		
 	}
 	public void draw() {
@@ -23,7 +23,7 @@ interface Shape {
 }
 public class InterfaceTest2 {
 	public static void main(String[] args) {
-		Shape donut = new Circle5(10); // 반지름이 10인 원 객체
+		Shape donut = new Circle1(10); // 반지름이 10인 원 객체
 		donut.redraw();
 		System.out.println("면적은 " + donut.getArea());
 	}
