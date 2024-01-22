@@ -10,12 +10,12 @@ interface Shape {
 	}
 }
  class Circle1 implements Shape{
-	int r;
-	public Circle1(int r) {
+	double r;
+	public Circle1(double r) {
 		this.r = r;		
 	}
 	public void draw() {
-		System.out.println("반지름이 "+r+"인 원입니다.");
+		System.out.println("반지름이 "+r+"cm인 원입니다.");
 	}
 	public double getArea() {
 		return r*r*PI;
