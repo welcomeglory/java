@@ -13,7 +13,5 @@ public class bigInteger {
         BigInteger remainder = bigIntegerNumber.remainder(BigInteger.valueOf(9));
 
         System.out.println("9로 나눈 나머지: " + remainder);
-		}
-
-
+        }
 }
